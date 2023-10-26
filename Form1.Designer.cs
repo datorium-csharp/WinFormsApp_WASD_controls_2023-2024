@@ -28,18 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            hero = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)hero).BeginInit();
             SuspendLayout();
+            // 
+            // hero
+            // 
+            hero.BackColor = Color.Fuchsia;
+            hero.Location = new Point(319, 164);
+            hero.Name = "hero";
+            hero.Size = new Size(101, 100);
+            hero.TabIndex = 0;
+            hero.TabStop = false;
+            hero.Click += hero_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(962, 590);
+            BackColor = Color.DarkGray;
+            ClientSize = new Size(755, 440);
+            Controls.Add(hero);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            KeyDown += Form1_KeyDown;
+            KeyPress += Form1_KeyPress;
+            ((System.ComponentModel.ISupportInitialize)hero).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox hero;
     }
 }
