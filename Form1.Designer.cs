@@ -29,18 +29,29 @@
         private void InitializeComponent()
         {
             hero = new PictureBox();
+            food = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)hero).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)food).BeginInit();
             SuspendLayout();
             // 
             // hero
             // 
             hero.BackColor = Color.Fuchsia;
-            hero.Location = new Point(319, 164);
+            hero.Location = new Point(99, 237);
             hero.Name = "hero";
-            hero.Size = new Size(101, 100);
+            hero.Size = new Size(100, 100);
             hero.TabIndex = 0;
             hero.TabStop = false;
             hero.Click += hero_Click;
+            // 
+            // food
+            // 
+            food.BackColor = Color.Lime;
+            food.Location = new Point(545, 93);
+            food.Name = "food";
+            food.Size = new Size(50, 50);
+            food.TabIndex = 1;
+            food.TabStop = false;
             // 
             // Form1
             // 
@@ -48,6 +59,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkGray;
             ClientSize = new Size(755, 440);
+            Controls.Add(food);
             Controls.Add(hero);
             Name = "Form1";
             Text = "Form1";
@@ -55,11 +67,13 @@
             KeyDown += Form1_KeyDown;
             KeyPress += Form1_KeyPress;
             ((System.ComponentModel.ISupportInitialize)hero).EndInit();
+            ((System.ComponentModel.ISupportInitialize)food).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private PictureBox hero;
+        private PictureBox food;
     }
 }
