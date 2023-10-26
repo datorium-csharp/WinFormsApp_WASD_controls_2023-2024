@@ -26,24 +26,28 @@ namespace WinFormsApp_WASD_controls_2023_2024
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.A)
+            MoveTheHero(e.KeyCode);
+            CollisionCheck();
+        }
+
+        private void MoveTheHero(Keys keyCode)
+        {
+            if (keyCode == Keys.A)
             {
                 hero.Left -= 10;
             }
-            else if (e.KeyCode == Keys.D)
+            else if (keyCode == Keys.D)
             {
                 hero.Left += 10;
             }
-            else if (e.KeyCode == Keys.W)
+            else if (keyCode == Keys.W)
             {
                 hero.Top -= 10;
             }
-            else if (e.KeyCode == Keys.S)
+            else if (keyCode == Keys.S)
             {
                 hero.Top += 10;
             }
-
-            CollisionCheck();
         }
 
         private void CollisionCheck()
